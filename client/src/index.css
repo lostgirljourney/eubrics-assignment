@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import '~antd/dist/antd.css';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #f9f9f9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.ant-col-8,
+.ant-col-12 {
+  display: flex;
+}
+
+.dflex {
+  display: flex;
+  justify-content: center;
+}
+
+.mr-2 {
+  margin-right: 2px;
+}

@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  width: 120px;
+  height: 31px;
+  display: flex;
+  color: #fff;
+  font: 1.125rem;
+  align-items: center;
+}
+
+.layout {
+  padding-top: 64px;
+  min-height: calc(100vh - 64px);
+}
+
+.sideBar {
+  min-height: calc(100vh - 64px);
+}
+
+.siteLayoutBackground {
+  background: #fff;
+  padding: 24px;
+  min-height: calc(100vh - 64px);
+}
