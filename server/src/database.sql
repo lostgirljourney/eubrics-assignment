@@ -2,7 +2,8 @@ CREATE DATABASE behaviour;
 
 
 CREATE TABLE behaviourList (id serial PRIMARY KEY,
-                                              name VARCHAR(500));
+                                              name VARCHAR(500),
+                                                   tname VARCHAR(50));
 
 
 CREATE TABLE todoMakeDecisions (id serial PRIMARY KEY,
