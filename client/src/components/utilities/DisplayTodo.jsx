@@ -1,7 +1,6 @@
 import { EditFilled, DeleteOutlined } from '@ant-design/icons';
 import { Space, Table, Button, Modal } from 'antd';
 import { useState, useEffect } from 'react';
-import { baseURL } from '../App';
 import EditTodoForm from './EditTodoForm';
 import axios from 'axios';
 
@@ -13,7 +12,7 @@ const DisplayTodo = ({ path }) => {
 
   useEffect(() => {
     axios
-      .get(`${baseURL}/${path}`)
+      .get(`/${path}`)
       .then((response) => {
         setTodos(response.data);
       })
@@ -22,7 +21,7 @@ const DisplayTodo = ({ path }) => {
 
   const delTodo = async (id) => {
     try {
-      const deletetodo = await axios.delete(`${baseURL}/${path}/${id}`);
+      const deletetodo = await axios.delete(`/${path}/${id}`);
       setTodos(data.filter((item) => item.id !== id));
     } catch (error) {
       console.error(error);

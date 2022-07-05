@@ -1,7 +1,9 @@
+import 'dotenv/config';
+import cors from 'cors';
+import path from 'path';
+import pool from './db.cjs';
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
-import pool from './db.cjs';
 import todoMakeDecisions from './routes/todoMakeDecisions.js';
 import todoDriveResults from './routes/todoDriveResults.js';
 import todoInfluenceNegotiate from './routes/todoInfluenceNegotiate.js';
@@ -13,6 +15,10 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+}
 
 app.listen(PORT, () => {
   console.log(`Listening to server port: http://localhost:${PORT}`);

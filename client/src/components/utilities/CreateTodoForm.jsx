@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { baseURL } from '../App';
 import { useState, useCallback } from 'react';
 import { Button, message, Input } from 'antd';
 import { CheckOutlined } from '@ant-design/icons';
@@ -25,7 +24,7 @@ const CreateTodoForm = ({ placeholder, todoVal, path }) => {
       e.preventDefault();
       if (value.length > 0) {
         try {
-          let response = await axios.post(`${baseURL}/${path}`, {
+          let response = await axios.post(`/${path}`, {
             about: value
           });
           if (response.status === 200) {

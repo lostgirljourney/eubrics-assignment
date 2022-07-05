@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { baseURL } from '../App';
 import { useState } from 'react';
 import { Button, message, Input } from 'antd';
 import { CheckOutlined } from '@ant-design/icons';
@@ -24,7 +23,7 @@ const EditTodoForm = ({ placeholder, todoVal, todoId, path }) => {
     e.preventDefault();
     if (value.length > 0) {
       try {
-        let response = await axios.put(`${baseURL}/${path}/${todoId}`, {
+        let response = await axios.put(`/${path}/${todoId}`, {
           about: value
         });
         if (response.status === 200) {
