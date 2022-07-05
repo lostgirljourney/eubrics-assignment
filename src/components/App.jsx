@@ -16,7 +16,7 @@ import MakeDecisions from './tables/MakeDecisions';
 import ManageConflict from './tables/ManageConflict';
 import ThinkLaterally from './tables/ThinkLaterally';
 
-const baseURL = 'http://localhost:5000';
+const baseURL = 'https://assignment-eubrics.herokuapp.com';
 
 const contentLayout = {
   padding: '0px 24px 24px',
