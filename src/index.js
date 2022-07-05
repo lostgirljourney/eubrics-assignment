@@ -2,6 +2,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import path from 'path';
 import pool from './db.cjs';
+import { fileURLToPath } from 'url';
 import express from 'express';
 import bodyParser from 'body-parser';
 import todoMakeDecisions from './routes/todoMakeDecisions.js';
@@ -15,6 +16,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
